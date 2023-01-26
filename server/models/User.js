@@ -5,6 +5,10 @@ const userSchema = new Schema({
     password: String,
     email: String,
     createdAt:String,
+    userSkills: {
+        type: Schema.Types.ObjectId,
+        ref: 'Skill'
+    }
 });
 
 module.exports = model('User', userSchema)
